@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {% if stock %}{{ stock.ticker }} Details{% else %}Stock Details{% endif %} &middot; Local Buy &amp; Sell
+{% endblock %}
+
+{% block content %}
+<section aria-labelledby="stock-details-heading">
+  {% if stock is none %}
+    <h1 id="stock-details-heading">Stock Details</h1>
+    <p class="empty">That stock is not available.</p>
+  {% else %}
+    <h1 id="stock-details-heading">{{ stock.company_name }} ({{ stock.ticker }})</h1>
+
+    <dl class="stock-summary">
+      <dt>Ticker</dt>
+      <dd>{{ stock.ticker }}</dd>
+      <dt>Current Price</dt>
+      <dd>${{ "%.2f"|format(stock.current_price) }}</dd>
+      <dt>Available Shares</dt>
+      <dd>{{ stock.available_shares }}</dd>
+      <dt>Shares You Own</dt>
+      <dd>{{ shares_owned }}</dd>
+    </dl>
+
+    {% if error %}
+      <p class="error" role="alert">{{ error }}</p>
+    {% endif %}
+
+    {% set prefill = (form.quantity if form and form.quantity is not none else "") %}
+
+    <section aria-labelledby="buy-heading">
+      <h2 id="buy-heading">Buy</h2>
+      <form method="post" action="{{ url_for('orders.review') }}">
+        <input type="hidden" name="stock_id" value="{{ stock.id }}">
+        <input type="hidden" name="action" value="buy">
+        <div class="field">
+          <label for="buy-quantity">Quantity to buy</label>
+          <input type="number" id="buy-quantity" name="quantity" min="1" step="1"
+                 value="{{ prefill }}">
+        </div>
+        <button type="submit">Review Buy</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="sell-heading">
+      <h2 id="sell-heading">Sell</h2>
+      <form method="post" action="{{ url_for('orders.review') }}">
+        <input type="hidden" name="stock_id" value="{{ stock.id }}">
+        <input type="hidden" name="action" value="sell">
+        <div class="field">
+          <label for="sell-quantity">Quantity to sell</label>
+          <input type="number" id="sell-quantity" name="quantity" min="1" step="1"
+                 value="{{ prefill }}">
+        </div>
+        <button type="submit">Review Sell</button>
+      </form>
+    </section>
+  {% endif %}
+</section>
+{% endblock %}

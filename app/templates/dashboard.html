@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard &middot; Local Buy &amp; Sell{% endblock %}
+
+{% block content %}
+<section aria-labelledby="dashboard-heading">
+  <h1 id="dashboard-heading">Dashboard</h1>
+
+  {% if account is none %}
+    <p class="empty">No demo account is available yet.</p>
+  {% else %}
+    <dl class="account-summary">
+      <dt>Account ID</dt>
+      <dd>{{ account.id }}</dd>
+      <dt>Cash Balance</dt>
+      <dd>${{ "%.2f"|format(cash) }}</dd>
+    </dl>
+
+    <h2>Holdings</h2>
+    {% if holdings %}
+      <table>
+        <caption class="sr-only">Current holdings for this account</caption>
+        <thead>
+          <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Ticker</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Current Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for position in holdings %}
+          <tr>
+            <td>{{ position.stock.company_name }}</td>
+            <td>{{ position.stock.ticker }}</td>
+            <td>{{ position.quantity }}</td>
+            <td>${{ "%.2f"|format(position.stock.current_price) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p class="empty">You do not own any shares yet.</p>
+    {% endif %}
+  {% endif %}
+</section>
+{% endblock %}

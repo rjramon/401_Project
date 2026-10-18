@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Trade Confirmed &middot; Local Buy &amp; Sell{% endblock %}
+
+{% block content %}
+<section aria-labelledby="confirmation-heading">
+  <h1 id="confirmation-heading">Trade Confirmed</h1>
+
+  <p>Your {{ trade.action }} order has been completed.</p>
+
+  <dl class="confirmation">
+    <dt>Company</dt>
+    <dd>{{ trade.company }} ({{ trade.ticker }})</dd>
+    <dt>Action</dt>
+    <dd>{{ trade.action }}</dd>
+    <dt>Shares</dt>
+    <dd>{{ trade.quantity }}</dd>
+    <dt>Price per Share</dt>
+    <dd>${{ "%.2f"|format(trade.price) }}</dd>
+    <dt>{% if trade.action == "buy" %}Total Cost{% else %}Total Proceeds{% endif %}</dt>
+    <dd>${{ "%.2f"|format(trade.total) }}</dd>
+    <dt>Cash Balance</dt>
+    <dd>${{ "%.2f"|format(trade.actual_cash) }}</dd>
+  </dl>
+
+  <p>
+    <a href="{{ url_for('main.dashboard') }}">Back to Dashboard</a>
+    &middot;
+    <a href="{{ url_for('main.stock_list') }}">Stock List</a>
+  </p>
+</section>
+{% endblock %}

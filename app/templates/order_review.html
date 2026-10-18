@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Order Review &middot; Local Buy &amp; Sell{% endblock %}
+
+{% block content %}
+<section aria-labelledby="order-review-heading">
+  <h1 id="order-review-heading">Order Review</h1>
+
+  <p>Please review this trade before confirming.</p>
+
+  <dl class="order-review">
+    <dt>Company</dt>
+    <dd>{{ review.company }} ({{ review.ticker }})</dd>
+    <dt>Action</dt>
+    <dd>{{ review.action }}</dd>
+    <dt>Shares</dt>
+    <dd>{{ review.quantity }}</dd>
+    <dt>Price per Share</dt>
+    <dd>${{ "%.2f"|format(review.price) }}</dd>
+    <dt>{% if review.action == "buy" %}Total Cost{% else %}Total Proceeds{% endif %}</dt>
+    <dd>${{ "%.2f"|format(review.total) }}</dd>
+    <dt>Expected Cash After</dt>
+    <dd>${{ "%.2f"|format(review.expected_cash) }}</dd>
+  </dl>
+
+  <div class="order-actions">
+    <form method="post" action="{{ url_for('orders.confirm', order_id=review.order_id) }}">
+      <button type="submit">Confirm</button>
+    </form>
+    <form method="post" action="{{ url_for('orders.cancel', order_id=review.order_id) }}">
+      <button type="submit">Cancel</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

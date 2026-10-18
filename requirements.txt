@@ -1,0 +1,20 @@
+# Pinned dependencies for the Local Buy and Sell milestone (Python 3).
+# Versions are pinned exactly for reproducible installs. All are released,
+# mutually compatible versions that run on Python 3.14.
+
+# Web framework and app factory.
+Flask==3.1.3
+
+# ORM: Flask integration plus the SQLAlchemy core it binds.
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.1.4
+
+# MySQL driver used by the mysql+pymysql:// connection string.
+PyMySQL==1.2.3
+
+# Loads a local .env for development convenience (no secrets in source).
+python-dotenv==1.2.4
+
+# Testing: pytest runner plus Hypothesis for property-based tests.
+pytest==9.1.1
+hypothesis==6.170.0

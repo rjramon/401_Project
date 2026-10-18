@@ -1,0 +1,478 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Project scaffolding and configuration": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146158326
+      },
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146163970
+      },
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146803186
+      }
+    ],
+    "2. Define database models (`app/models.py`)": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146158883
+      },
+      {
+        "executionId": "9101f0fd-bd71-4a7a-bba5-d1d6ffbd8d0e",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146898138
+      },
+      {
+        "executionId": "9101f0fd-bd71-4a7a-bba5-d1d6ffbd8d0e",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147012556
+      }
+    ],
+    "3.1 Implement read/lookup helpers": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146158950
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147103200
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147486664
+      }
+    ],
+    "3.2 Implement locking and conditional-claim helpers": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146158999
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147104379
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147488010
+      }
+    ],
+    "3.3 Implement mutation helpers (add/flush only, never commit)": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159036
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147105504
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147489368
+      }
+    ],
+    "4.1 Create `scripts/init_db.py`": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159071
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147106641
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147490128
+      }
+    ],
+    "4.2 Create `scripts/seed_demo.py`": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159109
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147494853
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147718629
+      }
+    ],
+    "4.3 Create `scripts/reset_demo.py`": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159144
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147495573
+      },
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147721761
+      }
+    ],
+    "5.1 Define typed trade errors": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159182
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792147760035
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792147941867
+      }
+    ],
+    "5.2 Implement `prepare_order(account_id, stock_id, action, quantity_raw)`": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159224
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792147946188
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148666658
+      }
+    ],
+    "5.3 Add test fixtures and separate test DB (`tests/conftest.py`)*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159261
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792147947226
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148669905
+      }
+    ],
+    "5.4 Write example tests for `prepare_order`*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159294
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148673681
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148916984
+      }
+    ],
+    "5.5 Write Hypothesis property tests for the review step (min 100 iterations each)*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159345
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148675087
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148917908
+      }
+    ],
+    "6.1 Implement `confirm_order(account_id, order_id)`": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159379
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148676424
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148915595
+      }
+    ],
+    "6.2 Write exact milestone BUY and SELL example tests*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159420
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149378097
+      }
+    ],
+    "6.3 Write execute edge-case example tests*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159456
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149379514
+      }
+    ],
+    "6.4 Write Hypothesis property tests for the execute step (min 100 iterations each)*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159494
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149380641
+      }
+    ],
+    "7.1 Implement `cancel_order(account_id, order_id)`": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159528
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148677413
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149376704
+      }
+    ],
+    "7.2 Write cancel tests*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159567
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149386184
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149612166
+      }
+    ],
+    "8.1 Implement GET routes (`app/routes/main.py`)": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159602
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149387579
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149609973
+      }
+    ],
+    "8.2 Implement order POST/confirmation routes (`app/routes/orders.py`)": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159640
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149388477
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149611375
+      }
+    ],
+    "9.1 Create page templates": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159698
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149617655
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150028024
+      }
+    ],
+    "9.2 Create static assets": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159731
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149618387
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150029426
+      }
+    ],
+    "10.1 Write concurrency and persistence tests (`tests/test_concurrency.py`)*": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159768
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149616299
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150030250
+      }
+    ],
+    "11.1 Run the full verification pass and produce the report": [
+      {
+        "executionId": "c7702786-a8d6-4bd7-b339-d2dc5e0e1fa3",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792146159803
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150034001
+      },
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150975391
+      }
+    ],
+    "3. Implement no-commit data-access helpers (`app/db.py`)": [
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147489405
+      }
+    ],
+    "4. Database initialization and demo seed scripts (explicit, never on startup)": [
+      {
+        "executionId": "3ad82f4b-2d7c-4d78-b95a-10f0083d26da",
+        "chatSessionId": "sess_d11b3d1c-11ec-4d9a-b5f3-4c0e7e18efc9",
+        "timestamp": 1792147721802
+      }
+    ],
+    "5. Trading service — review step (`app/services/trading.py`) with tests": [
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792148917953
+      }
+    ],
+    "6. Trading service — execute/confirm step with tests": [
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149380682
+      }
+    ],
+    "8. Flask routes and blueprints": [
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149611419
+      }
+    ],
+    "7. Trading service — cancel step with tests": [
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792149612222
+      }
+    ],
+    "9. Templates and static assets": [
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150029467
+      }
+    ],
+    "10. Concurrency and integration tests (against the separate test DB)": [
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150030292
+      }
+    ],
+    "11. End-to-end verification (manual + automated checklist and final report)": [
+      {
+        "executionId": "9cda0b37-844c-408d-a40f-9bd9c2f97134",
+        "chatSessionId": "sess_9b388278-5043-4e6a-8641-5ab89d49f4c1",
+        "timestamp": 1792150975439
+      }
+    ]
+  }
+}
