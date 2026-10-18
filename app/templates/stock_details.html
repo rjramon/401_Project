@@ -7,55 +7,73 @@
 {% block content %}
 <section aria-labelledby="stock-details-heading">
   {% if stock is none %}
-    <h1 id="stock-details-heading">Stock Details</h1>
-    <p class="empty">That stock is not available.</p>
+    <h1 id="stock-details-heading" class="h3 mb-4">Stock Details</h1>
+    <p class="text-muted fst-italic">That stock is not available.</p>
   {% else %}
-    <h1 id="stock-details-heading">{{ stock.company_name }} ({{ stock.ticker }})</h1>
+    <h1 id="stock-details-heading" class="h3 mb-4">{{ stock.company_name }} ({{ stock.ticker }})</h1>
 
-    <dl class="stock-summary">
-      <dt>Ticker</dt>
-      <dd>{{ stock.ticker }}</dd>
-      <dt>Current Price</dt>
-      <dd>${{ "%.2f"|format(stock.current_price) }}</dd>
-      <dt>Available Shares</dt>
-      <dd>{{ stock.available_shares }}</dd>
-      <dt>Shares You Own</dt>
-      <dd>{{ shares_owned }}</dd>
-    </dl>
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <dl class="row mb-0">
+          <dt class="col-sm-4 text-muted fw-normal">Ticker</dt>
+          <dd class="col-sm-8 fw-semibold">{{ stock.ticker }}</dd>
+          <dt class="col-sm-4 text-muted fw-normal">Current Price</dt>
+          <dd class="col-sm-8 fw-semibold">${{ "%.2f"|format(stock.current_price) }}</dd>
+          <dt class="col-sm-4 text-muted fw-normal">Available Shares</dt>
+          <dd class="col-sm-8 fw-semibold">{{ stock.available_shares }}</dd>
+          <dt class="col-sm-4 text-muted fw-normal">Shares You Own</dt>
+          <dd class="col-sm-8 fw-semibold mb-0">{{ shares_owned }}</dd>
+        </dl>
+      </div>
+    </div>
 
     {% if error %}
-      <p class="error" role="alert">{{ error }}</p>
+      <div class="alert alert-danger" role="alert">{{ error }}</div>
     {% endif %}
 
     {% set prefill = (form.quantity if form and form.quantity is not none else "") %}
 
-    <section aria-labelledby="buy-heading">
-      <h2 id="buy-heading">Buy</h2>
-      <form method="post" action="{{ url_for('orders.review') }}">
-        <input type="hidden" name="stock_id" value="{{ stock.id }}">
-        <input type="hidden" name="action" value="buy">
-        <div class="field">
-          <label for="buy-quantity">Quantity to buy</label>
-          <input type="number" id="buy-quantity" name="quantity" min="1" step="1"
-                 value="{{ prefill }}">
-        </div>
-        <button type="submit">Review Buy</button>
-      </form>
-    </section>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <section aria-labelledby="buy-heading">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 id="buy-heading" class="h5 card-title">Buy</h2>
+              <form method="post" action="{{ url_for('orders.review') }}">
+                <input type="hidden" name="stock_id" value="{{ stock.id }}">
+                <input type="hidden" name="action" value="buy">
+                <div class="mb-3">
+                  <label class="form-label" for="buy-quantity">Quantity to buy</label>
+                  <input type="number" class="form-control" id="buy-quantity" name="quantity"
+                         min="1" step="1" value="{{ prefill }}">
+                </div>
+                <button type="submit" class="btn btn-success">Review Buy</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
 
-    <section aria-labelledby="sell-heading">
-      <h2 id="sell-heading">Sell</h2>
-      <form method="post" action="{{ url_for('orders.review') }}">
-        <input type="hidden" name="stock_id" value="{{ stock.id }}">
-        <input type="hidden" name="action" value="sell">
-        <div class="field">
-          <label for="sell-quantity">Quantity to sell</label>
-          <input type="number" id="sell-quantity" name="quantity" min="1" step="1"
-                 value="{{ prefill }}">
-        </div>
-        <button type="submit">Review Sell</button>
-      </form>
-    </section>
+      <div class="col-md-6">
+        <section aria-labelledby="sell-heading">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 id="sell-heading" class="h5 card-title">Sell</h2>
+              <form method="post" action="{{ url_for('orders.review') }}">
+                <input type="hidden" name="stock_id" value="{{ stock.id }}">
+                <input type="hidden" name="action" value="sell">
+                <div class="mb-3">
+                  <label class="form-label" for="sell-quantity">Quantity to sell</label>
+                  <input type="number" class="form-control" id="sell-quantity" name="quantity"
+                         min="1" step="1" value="{{ prefill }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Review Sell</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   {% endif %}
 </section>
 {% endblock %}

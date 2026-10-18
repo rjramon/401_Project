@@ -4,38 +4,41 @@
 
 {% block content %}
 <section aria-labelledby="stock-list-heading">
-  <h1 id="stock-list-heading">Stock List</h1>
+  <h1 id="stock-list-heading" class="h3 mb-4">Stock List</h1>
 
   {% if stocks %}
-    <table>
-      <caption class="sr-only">Available stocks</caption>
-      <thead>
-        <tr>
-          <th scope="col">Company</th>
-          <th scope="col">Ticker</th>
-          <th scope="col">Current Price</th>
-          <th scope="col">Available Shares</th>
-          <th scope="col">Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for stock in stocks %}
-        <tr>
-          <td>{{ stock.company_name }}</td>
-          <td>{{ stock.ticker }}</td>
-          <td>${{ "%.2f"|format(stock.current_price) }}</td>
-          <td>{{ stock.available_shares }}</td>
-          <td>
-            <a href="{{ url_for('main.stock_details', stock_id=stock.id) }}">
-              View {{ stock.ticker }}
-            </a>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle">
+        <caption class="sr-only">Available stocks</caption>
+        <thead class="table-light">
+          <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Ticker</th>
+            <th scope="col" class="text-end">Current Price</th>
+            <th scope="col" class="text-end">Available Shares</th>
+            <th scope="col" class="text-end">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for stock in stocks %}
+          <tr>
+            <td>{{ stock.company_name }}</td>
+            <td>{{ stock.ticker }}</td>
+            <td class="text-end">${{ "%.2f"|format(stock.current_price) }}</td>
+            <td class="text-end">{{ stock.available_shares }}</td>
+            <td class="text-end">
+              <a class="btn btn-sm btn-outline-primary"
+                 href="{{ url_for('main.stock_details', stock_id=stock.id) }}">
+                View {{ stock.ticker }}
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   {% else %}
-    <p class="empty">No stocks are available.</p>
+    <p class="text-muted fst-italic">No stocks are available.</p>
   {% endif %}
 </section>
 {% endblock %}

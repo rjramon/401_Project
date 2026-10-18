@@ -4,43 +4,50 @@
 
 {% block content %}
 <section aria-labelledby="dashboard-heading">
-  <h1 id="dashboard-heading">Dashboard</h1>
+  <h1 id="dashboard-heading" class="h3 mb-4">Dashboard</h1>
 
   {% if account is none %}
-    <p class="empty">No demo account is available yet.</p>
+    <p class="text-muted fst-italic">No demo account is available yet.</p>
   {% else %}
-    <dl class="account-summary">
-      <dt>Account ID</dt>
-      <dd>{{ account.id }}</dd>
-      <dt>Cash Balance</dt>
-      <dd>${{ "%.2f"|format(cash) }}</dd>
-    </dl>
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h2 class="h5 card-title">Account Summary</h2>
+        <dl class="row mb-0">
+          <dt class="col-sm-4 text-muted fw-normal">Account ID</dt>
+          <dd class="col-sm-8 fw-semibold">{{ account.id }}</dd>
+          <dt class="col-sm-4 text-muted fw-normal">Cash Balance</dt>
+          <dd class="col-sm-8 fw-semibold">${{ "%.2f"|format(cash) }}</dd>
+        </dl>
+      </div>
+    </div>
 
-    <h2>Holdings</h2>
+    <h2 class="h4 mb-3">Holdings</h2>
     {% if holdings %}
-      <table>
-        <caption class="sr-only">Current holdings for this account</caption>
-        <thead>
-          <tr>
-            <th scope="col">Company</th>
-            <th scope="col">Ticker</th>
-            <th scope="col">Shares</th>
-            <th scope="col">Current Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for position in holdings %}
-          <tr>
-            <td>{{ position.stock.company_name }}</td>
-            <td>{{ position.stock.ticker }}</td>
-            <td>{{ position.quantity }}</td>
-            <td>${{ "%.2f"|format(position.stock.current_price) }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+          <caption class="sr-only">Current holdings for this account</caption>
+          <thead class="table-light">
+            <tr>
+              <th scope="col">Company</th>
+              <th scope="col">Ticker</th>
+              <th scope="col" class="text-end">Shares</th>
+              <th scope="col" class="text-end">Current Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for position in holdings %}
+            <tr>
+              <td>{{ position.stock.company_name }}</td>
+              <td>{{ position.stock.ticker }}</td>
+              <td class="text-end">{{ position.quantity }}</td>
+              <td class="text-end">${{ "%.2f"|format(position.stock.current_price) }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     {% else %}
-      <p class="empty">You do not own any shares yet.</p>
+      <p class="text-muted fst-italic">You do not own any shares yet.</p>
     {% endif %}
   {% endif %}
 </section>
